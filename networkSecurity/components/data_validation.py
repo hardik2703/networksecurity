@@ -1,4 +1,4 @@
-from networkSecurity.entity.artifact_entity import DataIngestionArtifact,DataValidationArtifact
+from networkSecurity.entity.artifacts_entity import DataIngestionArtifact,DataValidationArtifact
 from networkSecurity.entity.config_entity import DataValidationConfig
 from networkSecurity.exception.exception import NetworkSecurityException 
 from networkSecurity.logging.logger import logging 

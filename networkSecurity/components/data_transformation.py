@@ -8,7 +8,7 @@ from sklearn.pipeline import Pipeline
 from networkSecurity.constant.training_pipeline import TARGET_COLUMN
 from networkSecurity.constant.training_pipeline import DATA_TRANSFORMATION_IMPUTER_PARAMS
 
-from networkSecurity.entity.artifact_entity import (
+from networkSecurity.entity.artifacts_entity import (
     DataTransformationArtifact,
     DataValidationArtifact
 )
