@@ -11,6 +11,7 @@ pymongo[srv]
 dagshub
 fastapi
 uvicorn
+setuptools
 
 
 
