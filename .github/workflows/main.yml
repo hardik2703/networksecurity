@@ -81,25 +81,9 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
       
       
-      
       - name: Pull latest images
         run: |
-          echo "Checking ECR image..."
-
-          ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-          REGION="${{ secrets.AWS_REGION }}"
-          REPOSITORY="${{ secrets.ECR_REPOSITORY_NAME }}"
-
-          IMAGE_URI="${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${REPOSITORY}:latest"
-
-          echo "Image URI: $IMAGE_URI"
-
-          aws ecr describe-images \
-            --repository-name "$REPOSITORY" \
-            --image-ids imageTag=latest \
-            --region "$REGION"
-
-          docker pull "$IMAGE_URI"
+         docker pull ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
          
       #- name: Stop and remove  container if running
        # run: |
