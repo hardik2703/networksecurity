@@ -1,6 +1,10 @@
 import os
 import sys
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from networkSecurity.exception.exception import NetworkSecurityException
 from networkSecurity.logging.logger import logging
 
@@ -45,8 +49,8 @@ dagshub.init(
     mlflow=True
 )
 
-# os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/krishnaik06/networksecurity.mlflow"
-# os.environ["MLFLOW_TRACKING_USERNAME"]="krishnaik06"
+# os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/hardik2703/networksecurity.mlflow"
+# os.environ["MLFLOW_TRACKING_USERNAME"]="hardik2703"
 # os.environ["MLFLOW_TRACKING_PASSWORD"]="YOUR_TOKEN"
 
 
@@ -70,7 +74,7 @@ class ModelTrainer:
         classification_train_metric,
         classification_test_metric
     ):
-        # mlflow.set_registry_uri("https://dagshub.com/krishnaik06/networksecurity.mlflow")
+        # mlflow.set_registry_uri("https://dagshub.com/hardik2703/networksecurity.mlflow")
 
         tracking_url_type_store = urlparse(
             mlflow.get_tracking_uri()
